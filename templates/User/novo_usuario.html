@@ -1,0 +1,23 @@
+{% extends 'template.html'%}
+{% block conteudo%}
+<form class="formularioJogo" method="post" action="{{ url_for('criar_usuario') }}" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    <fieldset>
+        <div class="form-group inputBox">
+            {{ form.nickname.label(class="form-label") }}
+            {{ form.nickname(class="form-control") }}
+        </div>
+        <div class="form-group inputBox">
+            {{ form.nome.label(class="form-label") }}
+            {{ form.nome(class="form-control") }}
+        </div>
+        <div class="form-group inputBox">
+            {{ form.senha.label(class="form-label") }}
+            {{ form.senha(class="form-control") }}
+        </div>
+        <div class="form-group buttons">
+            {{ form.salvar(class="btn btn-primary") }}
+        </div>
+    </fieldset>
+</form>
+{% endblock %}

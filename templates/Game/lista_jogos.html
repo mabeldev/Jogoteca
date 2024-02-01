@@ -1,0 +1,26 @@
+{% extends 'template.html' %}
+{% block conteudo %}
+<table class="table table-striped table-responsive table-bordered">
+    <thead class="thread-default">
+        <tr>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Console</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for jogo in jogos %}
+        <tr>
+            <td>{{jogo.nome}}</td>
+            <td>{{jogo.categoria}}</td>
+            <td>{{jogo.console}}</td>
+            
+            <td><button class="btn btn-primary"><a href="{{ url_for('editar', id=jogo.id) }}">Editar</a></button></td>
+            <td><button class="btn btn-danger"><a method="post"
+                        href="{{ url_for('deletar', id=jogo.id) }}">Deletar</a></button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a class="btn btn-primary" href="{{ url_for('novo') }}">Add</a>
+{% endblock %}

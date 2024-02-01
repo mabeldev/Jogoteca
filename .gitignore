@@ -1,0 +1,52 @@
+# Arquivos Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Arquivos de configuração
+instance/
+.webassets-cache
+
+# Arquivos de log
+*.log
+
+# Arquivos de banco de dados
+*.sqlite
+
+# Arquivos de migração
+migrations/
+
+# Arquivos de documentação
+docs/_build/
+
+# Arquivos de teste
+test/
+
+# Arquivos de distribuição 
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Outros arquivos e pastas
+.cache/
+.project
+.pydevproject
+.idea/
+uploads/
